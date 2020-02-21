@@ -25,7 +25,7 @@ namespace Szallitmanyprogram
                 {
                     case "E":Elmegy();
                         break;
-                    case "B":Bejön();
+                    case "B":Bejön(teljes, bent);
                         break;
                     case "K":Kilépés();
                         break;
@@ -33,7 +33,44 @@ namespace Szallitmanyprogram
                         break;
                 }
             } while (választás!="K");
+            
             Console.ReadKey();
+        }
+
+        private static void Kilépés()
+        {
+            
+        }
+
+        private static void Elmegy()
+        {
+            //Ha üres a lista, akkor írjuk ki, hogy nincs bent autó
+            //ellenőrzés, hogy az autó a listában van-e
+            //Ha igen akkor ki kell törölni a listából
+        }
+
+        static void Bejön(string[] teljes, List<string> bent)
+        {
+            Console.WriteLine("Adjon meg egy rendszámot.");
+            string bekér = Console.ReadLine();
+            
+            if (teljes.Contains(bekér))
+            {
+                bent.Add(bekér);
+                Console.WriteLine("Bemehet.");
+            }
+            else
+            {
+                Console.WriteLine("Nincs bent a rendszerben.");
+            }
+            if (true)
+            {
+                //ha tele van
+            }
+            //Minden autó bent van-e már?
+            //Ha nincs minden autó bent, akkor a bejövő autó a céghez tartozik-e?
+            //Ha igen, akkor tegyük a lista végére.
+            //HF eljárás irja ki hogy eljárással ami kiirja az aktuális bent lévő autokat.
         }
     }
 }
