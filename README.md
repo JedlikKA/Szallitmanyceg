@@ -1,0 +1,2 @@
+# Szallitmanyceg
+Kezdödik.
