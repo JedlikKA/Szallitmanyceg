@@ -5,3 +5,10 @@ C:\Users\Körmöndi.Alex.István\Desktop\Szallitmanyceg\Szallitmanyprogram\bin\D
 C:\Users\Körmöndi.Alex.István\Desktop\Szallitmanyceg\Szallitmanyprogram\bin\Debug\Szallitmanyprogram.pdb
 C:\Users\Körmöndi.Alex.István\Desktop\Szallitmanyceg\Szallitmanyprogram\obj\Debug\Szallitmanyprogram.exe
 C:\Users\Körmöndi.Alex.István\Desktop\Szallitmanyceg\Szallitmanyprogram\obj\Debug\Szallitmanyprogram.pdb
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\bin\Debug\Szallitmanyprogram.exe.config
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\bin\Debug\Szallitmanyprogram.exe
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\bin\Debug\Szallitmanyprogram.pdb
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\obj\Debug\Szallitmanyprogram.csprojAssemblyReference.cache
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\obj\Debug\Szallitmanyprogram.csproj.CoreCompileInputs.cache
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\obj\Debug\Szallitmanyprogram.exe
+C:\Users\PC\Source\Repos\Szallitmanyceg\Szallitmanyprogram\obj\Debug\Szallitmanyprogram.pdb

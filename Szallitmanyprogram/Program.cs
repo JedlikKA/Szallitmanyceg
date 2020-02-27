@@ -10,67 +10,68 @@ namespace Szallitmanyprogram
     {
         static void Main(string[] args)
         {
-            string[] teljes = { "ABC-123", "ASD-234", "FGH-432", "BAB-986", "SEX-444" };
+            string[] teljes = { "ABC-123", "ASD-234", "FGH-432", "SEX-696" };
             List<string> bent = new List<string>();
             string választás;
             do
             {
-                //A választási lehetőségek kiírása.
-                Console.WriteLine("Elmegy (E)");
-                Console.WriteLine("Bejön (B)");
+                //Választási lehetőségek kiírása
+                Console.WriteLine("Elmegy  (E)");
+                Console.WriteLine("Bejön   (B)");
                 Console.WriteLine("Kilépés (K)");
-                //A választás bekérése.
+                //Választás bekérése
                 választás = Console.ReadLine();
                 switch (választás)
                 {
-                    case "E":Elmegy();
-                        break;
-                    case "B":Bejön(teljes, bent);
-                        break;
-                    case "K":Kilépés();
-                        break;
-                    default: Console.WriteLine("Nem megfelelő a választás.");
-                        break;
+                    case "E": Elmegy(teljes, bent);     break;
+                    case "B": Bejön(teljes, bent);      break;
+                    case "K": Kilépés();                break;
+                    default: Console.WriteLine("Nem megfelelő választás..."); break;
                 }
             } while (választás!="K");
-            
             Console.ReadKey();
         }
 
-        private static void Kilépés()
+        static void Kilépés()
         {
-            
+            Console.WriteLine("Köszönjük, hogy használta rendszerünk programát! További szép napot!");
         }
 
-        private static void Elmegy()
+        static void Elmegy(string[] teljes, List<string> bent)
         {
-            //Ha üres a lista, akkor írjuk ki, hogy nincs bent autó
-            //ellenőrzés, hogy az autó a listában van-e
-            //Ha igen akkor ki kell törölni a listából
+            //Ha üres a lista, akkor írjuk ki hogy nincs bent autó.
+
+            Console.WriteLine("Kérem a rendszámot: ");
+            string rendszám = Console.ReadLine();
+            if (teljes.Contains(rendszám) && bent.Contains(rendszám))
+            {
+                Console.WriteLine("Sikeres kilépés!");
+                bent.Remove(rendszám);
+                Console.WriteLine("Bent lévő autók:");
+                Bentlevo_autok(teljes, bent);
+            }
         }
 
         static void Bejön(string[] teljes, List<string> bent)
         {
-            Console.WriteLine("Adjon meg egy rendszámot.");
-            string bekér = Console.ReadLine();
-            
-            if (teljes.Contains(bekér))
+            Console.WriteLine("Kérem a rendszámot: ");
+            string rendszám = Console.ReadLine();
+            if (teljes.Contains(rendszám)&& !bent.Contains(rendszám))
             {
-                bent.Add(bekér);
-                Console.WriteLine("Bemehet.");
+                Console.WriteLine("Sikeres belépés!");
+                bent.Add(rendszám);
+                Console.WriteLine("Bent lévő autók:");
+                Bentlevo_autok(teljes, bent);
             }
-            else
+            else Console.WriteLine("Sikertelen belépés!");
+            Console.ReadKey();
+        }
+        static void Bentlevo_autok (string[] teljes, List<string> bent)
+        {
+            foreach (string bentlevo_autók in bent)
             {
-                Console.WriteLine("Nincs bent a rendszerben.");
+                Console.WriteLine(bentlevo_autók + " ");
             }
-            if (true)
-            {
-                //ha tele van
-            }
-            //Minden autó bent van-e már?
-            //Ha nincs minden autó bent, akkor a bejövő autó a céghez tartozik-e?
-            //Ha igen, akkor tegyük a lista végére.
-            //HF eljárás irja ki hogy eljárással ami kiirja az aktuális bent lévő autokat.
         }
     }
 }
